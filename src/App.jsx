@@ -1,7 +1,7 @@
 const App = () => {
   return (
     <div className="p-1 h-screen">
-      <div className="flex text-xs gap-2 max-h-[2%]">
+      <div className="flex text-xs gap-2 max-h-[4%]">
         <p>NORM</p>
         <p>MATH</p>
         <p>DECI</p>
@@ -9,27 +9,27 @@ const App = () => {
       <div className="h-[20%] w-full bg-[#d4e4e3] rounded-xl text-black ">
         Display
       </div>
-      <div className="grid grid-cols-6 gap-x-2 gap-y-5 md:gap-y-6 text-[clamp(6px,3vw,20px)] h-[42%] py-2">
-        <button className="bg-[#fcc02c] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-yellow-800">
+      <div className="grid grid-cols-6 gap-x-2 gap-y-5 md:gap-y-6 text-[clamp(8px,4vw,20px)] h-[42%] py-2">
+        <button className="bg-[#fcc02c] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-yellow-800 border-t-[1.5px] border-t-[#f0e66f]">
           SHIFT
         </button>
-        <button className="bg-[#7065af] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider  active:bg-purple-800">
+        <button className="bg-[#7065af] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider  active:bg-purple-800 border-t-[1.5px] border-t-[#9a8fc8]">
           APLHA
         </button>
-        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
           left
         </button>
-        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
           right
         </button>
-        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
           MODE
         </button>
-        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider italic">
+        <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider italic border-t-[1.5px] border-t-[#8a878e]">
           2nd
         </button>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             CALC
           </button>
           <div
@@ -41,7 +41,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full   rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
            &int; dx
           </button>
           <div
@@ -52,10 +52,10 @@ const App = () => {
             <p className="text-[#9589d1]">:</p>
           </div>
         </div>
-        <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">up</button>
-        <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">down</button>
+        <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">up</button>
+        <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">down</button>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             x <sup>-1</sup>
           </button>
           <div
@@ -67,7 +67,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             Log <sub>x</sub>y
           </button>
           <div
@@ -83,7 +83,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             <math>
   <mfrac>
     <mn>x</mn>
@@ -111,7 +111,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
            <math>
       <msqrt>
         <mi style={{ position: "relative", top: "0.2em" }}>x</mi>
@@ -134,7 +134,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             x <sup>2</sup>
           </button>
           <div
@@ -146,7 +146,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             x <sup>y</sup>
           </button>
           <div
@@ -165,7 +165,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             log
           </button>
           <div
@@ -177,7 +177,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             Ln
           </button>
           <div
@@ -189,7 +189,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             (-)
           </button>
           <div
@@ -205,7 +205,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
                  <math>
       <mspace width="0.2em" />
       <mo>°</mo>
@@ -225,7 +225,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             hyp
           </button>
           <div
@@ -237,7 +237,7 @@ const App = () => {
           </div>
         </div>
        <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             Sin
           </button>
           <div
@@ -249,7 +249,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             Cos
           </button>
           <div
@@ -261,7 +261,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             Tan
           </button>
           <div
@@ -273,7 +273,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             RCL
           </button>
           <div
@@ -285,7 +285,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             ENG
           </button>
           <div
@@ -297,7 +297,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             (
           </button>
           <div
@@ -310,7 +310,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             )
           </button>
           <div
@@ -326,7 +326,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             S
             <math>
         <mo>&#x21CC;</mo> {/* ⇌ */}
@@ -355,7 +355,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800">
+          <button className="bg-[#504e53] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider active:bg-stone-800 border-t-[1.5px] border-t-[#8a878e]">
             M+
           </button>
           <div
@@ -367,9 +367,9 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-x-2 gap-y-5 md:gap-y-6 pt-4 sm:pt-8 text-[clamp(6px,3vw,20px)] h-[35%] pb-2">
+      <div className="grid grid-cols-5 gap-x-2 gap-y-4 sm:gap-y-5  text-[clamp(6px,3vw,20px)] h-[34%] pt-3 sm:pt-6">
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             7
           </button>
           <div
@@ -380,7 +380,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             8
           </button>
           <div
@@ -392,7 +392,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             9
           </button>
           <div
@@ -408,9 +408,9 @@ const App = () => {
             </p>
           </div>
         </div>
-        <button className="bg-[#e78f50] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-orange-900">del</button>
+        <button className="bg-[#e78f50] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-orange-900 border-t-[1.5px] border-t-[#c78d6c]">del</button>
         <div className="relative">
-          <button className="bg-[#e78f50] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-orange-900">
+          <button className="bg-[#e78f50] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-orange-900 border-t-[1.5px] border-t-[#c78d6c]">
             AC
           </button>
           <div
@@ -422,7 +422,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             4
           </button>
           <div
@@ -433,7 +433,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             5
           </button>
           <div
@@ -444,7 +444,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             6
           </button>
           <div
@@ -456,7 +456,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]" >
             x
           </button>
           <div
@@ -468,7 +468,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             <math >
         <mo>&#x00F7;</mo> {/* ÷ */}
       </math>
@@ -482,7 +482,7 @@ const App = () => {
           </div>
         </div>
        <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             1
           </button>
           <div
@@ -493,7 +493,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             3
           </button>
           <div
@@ -504,7 +504,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             3
           </button>
           <div
@@ -515,7 +515,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             +
           </button>
           <div
@@ -527,7 +527,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             -
           </button>
           <div
@@ -539,7 +539,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             0
           </button>
           <div
@@ -551,7 +551,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             .
           </button>
           <div
@@ -563,7 +563,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             Exp
           </button>
           <div
@@ -579,7 +579,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             Ans
           </button>
           <div
@@ -591,7 +591,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black">
+          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             =
           </button>
           <div
