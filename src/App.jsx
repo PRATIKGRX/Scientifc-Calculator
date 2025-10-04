@@ -5,6 +5,28 @@ const App = () => {
     setActiveState((prev) => (prev === char ? "" : char))
   }
   const [displayValue,setDisplayValue]=useState('');
+ // function to format numbers with non-breaking spaces
+const formatNumber = (value) => {
+  const digits = value.replace(/\s/g, ""); // remove existing spaces
+  const reversed = digits.split("").reverse().join("");
+  const groups = reversed.match(/.{1,3}/g) || [];
+  const formatted = groups
+    .map((g) => g.split("").reverse().join(""))
+    .reverse()
+    .join("\u00A0"); // non-breaking space
+  return formatted;
+};
+
+// add number
+const addNumber = (num) => {
+  setDisplayValue((prev) => formatNumber(prev + num));
+};
+
+// delete last
+const deleteLast = () => {
+  setDisplayValue((prev) => formatNumber(prev.replace(/\s/g, "").slice(0, -1)));
+};
+
   return (
     <div className="p-1 h-screen">
       <div className="flex text-xs max-h-[4%]">
@@ -12,15 +34,31 @@ const App = () => {
   className={`overflow-hidden transition-all duration-500 ease-in-out
     ${activeState ? "w-2 opacity-100 mr-2" : "w-0 opacity-0 mr-0"}`}
 >
-  {activeState}
+  {activeState} 
 </p>
         <p className="mr-2">NORM</p>
         <p className="mr-2">MATH</p>
         <p>DECI</p>
       </div>
-      <div className="h-[20%] leading-4 w-full bg-[#d4e4e3] rounded-xl text-black whitespace-normal break-words p-1 ">
-        {displayValue}
-      </div>
+      <div className="h-[20%] leading-4 w-full bg-[#d4e4e3] rounded-xl text-black whitespace-normal break-words p-1">
+  {displayValue}
+  <span
+    className="text-red-400"
+    style={{
+      animation: "blink 1s step-start infinite",
+    }}
+  >
+    |
+  </span>
+
+  <style>{`
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  `}</style>
+</div>
+
       <div className="grid grid-cols-6 gap-x-2 gap-y-5 md:gap-y-6 text-[clamp(8px,4vw,20px)] h-[42%] py-2">
         <button onClick={()=>toggleActiveState('S')} className="bg-[#fcc02c] w-full h-full  rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-yellow-800 border-t-[1.5px] border-t-[#f0e66f]">
           SHIFT
@@ -396,7 +434,7 @@ const App = () => {
       </div>
       <div className="grid grid-cols-5 gap-x-2 gap-y-4 sm:gap-y-5  text-[clamp(6px,3vw,20px)] h-[34%] pt-3 sm:pt-6">
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'7')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('7')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             7
           </button>
           <div
@@ -407,7 +445,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'8')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('8')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             8
           </button>
           <div
@@ -419,7 +457,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'9')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('9')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             9
           </button>
           <div
@@ -434,7 +472,7 @@ const App = () => {
             </p>
           </div>
         </div>
-        <button onClick={()=>setDisplayValue((prev)=>prev.slice(0,-1))} className="bg-[#e78f50] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-orange-900 border-t-[1.5px] border-t-[#c78d6c]">
+        <button  onClick={deleteLast} className="bg-[#e78f50] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider text-black active:bg-orange-900 border-t-[1.5px] border-t-[#c78d6c]">
           del
         </button>
         <div className="relative">
@@ -449,8 +487,9 @@ const App = () => {
             <p className="text-[#f0d322]">ALL</p>
           </div>
         </div>
-        <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'4')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+
+          <div className="relative">
+          <button id="test" onClick={() => addNumber('4')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             4
           </button>
           <div
@@ -461,7 +500,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'5')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('5')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             5
           </button>
           <div
@@ -472,7 +511,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'6')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('6')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             6 
           </button>
           <div
@@ -484,7 +523,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('x')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             x
           </button>
           <div
@@ -510,7 +549,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'1')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('1')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             1
           </button>
           <div
@@ -521,7 +560,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'2')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('2')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             2
           </button>
           <div
@@ -532,7 +571,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'3')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
+          <button onClick={() => addNumber('3')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
             3
           </button>
           <div
@@ -567,8 +606,7 @@ const App = () => {
           </div>
         </div>
         <div className="relative">
-          <button onClick={()=> setDisplayValue((prev)=>prev+'0')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">
-            0
+          <button onClick={() => addNumber('0')} className="bg-[#272a31] w-full h-full text-2xl rounded-t-lg rounded-b-2xl tracking-wider active:bg-black border-t-[1.5px] border-t-[#8a878e]">0
           </button>
           <div
             className="absolute  top-[clamp(-25px,-4vw,-10px)]  left-1/2 -translate-x-1/2 flex gap-2 items-center justify-between w-[88%] text-[clamp(6px,3vw,18px)]
